@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+
+
+<bean id="s1" class="Springclass.book">
+	<property name="book_id" value="book-1"></property>
+	<property name="book_name" value="The complete reference of Java"></property>
+	<property name="author" value="Herbert Schildt"></property>
+</bean>
+
+<bean id="s2" class="Springclass.Library">
+	<property name="Lib_id" value="lib-1"></property>
+	<property name="Lib_name" value="NEC Library"></property>
+	<property name="b" ref="s1"></property>
+</bean>
+
+<bean id="s3" class="Springclass.QuestionAndAnswer">
+	<property name="qid" value="q-1"></property>
+	<property name="qname" value="Expand WWW"></property>
+	<property name="ans">
+		<list>
+			<value>World Wide Web</value>
+			<value>World web wide</value>
+			<value>World web world</value>
+			<value>Web Wide World</value>
+		</list>
+	</property>
+</bean>
+
+<bean id="s4" class="Springclass.SetterWithMap">
+	<property name="m">
+		<map>
+			<entry key="Roll no" value="st-1"></entry>
+			<entry key="Name" value="abc"></entry>
+			<entry key="Email ID" value="abc@gmail.com"></entry>
+		</map>
+	</property>
+</bean>
+
+<bean id="c1" class="Springclass.Product">
+	<constructor-arg value="P-1"></constructor-arg>
+	<constructor-arg value="Laptop"></constructor-arg>
+	<constructor-arg value="Electronics"></constructor-arg>
+	<constructor-arg value="35000.00"></constructor-arg>
+</bean>
+
+<bean id="c2" class="Springclass.Customer">
+	<constructor-arg value="C-1"></constructor-arg>
+	<constructor-arg value="abc"></constructor-arg>
+	<constructor-arg ref="c1"></constructor-arg>
+</bean>
+
+<bean id="c3" class="Springclass.QuestionAndAnswer1">
+	<constructor-arg value="q-1"></constructor-arg>
+	<constructor-arg value="Founder of hibernate"></constructor-arg>
+	<constructor-arg>
+		<list>
+			<value>Gavin King</value>
+			<value>Bjorne Stroustrap</value>
+			<value>Guido Van Rossum</value>
+			<value>Pattrik Naughton</value>
+		</list>
+	</constructor-arg>
+</bean>
+
+<bean id="c4" class="Springclass.ConWithMap">
+	<constructor-arg>
+		<map>
+			<entry key="Name" value="abc"></entry>
+			<entry key="Salary" value="50000.00"></entry>
+			<entry key="Category" value="Developer"></entry>
+		</map>
+	</constructor-arg>
+</bean>
+
+</beans>

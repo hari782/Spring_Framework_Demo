@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <modelVersion>4.0.0</modelVersion>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <parent>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    <groupId>cn.org.thinkcloud</groupId>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    <artifactId>think-cloud-build</artifactId>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    <version>2.0.0.RELEASE</version>
+                                        
+  
+  
+  
+  
+  
+  
+  
+  
+  </parent>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <groupId>SpringFramework</groupId>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <artifactId>Spring</artifactId>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <version>1.0</version>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <packaging>pom</packaging>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <properties>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    <rversion>2.0.0.RELEASE</rversion>
+                                        
+  
+  
+  
+  
+  
+  
+  
+  
+  </properties>
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--OWN Dependencies -->
+                      
+  
+  
+  
+  
+  
+  
+  
+  
+  <dependencyManagement>
+                                            
+    
+    
+    
+    
+    
+    
+    
+    
+    <dependencies>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <dependency>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <groupId>${project.groupId}</groupId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <artifactId>Spring-domain</artifactId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <version>1.0</version>
+                                                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      </dependency>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <dependency>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <groupId>${project.groupId}</groupId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <artifactId>Spring-repo-api</artifactId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <version>1.0</version>
+                                                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      </dependency>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <dependency>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <groupId>${project.groupId}</groupId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <artifactId>Spring-biz-api</artifactId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <version>1.0</version>
+                                                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      </dependency>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <dependency>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <groupId>${project.groupId}</groupId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <artifactId>Spring-manager-api</artifactId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <version>1.0</version>
+                                                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      </dependency>
+                                                                  
+      
+      
+      
+      
+      
+      
+      
+      
+      <dependency>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <groupId>${project.groupId}</groupId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <artifactId>Spring-commons</artifactId>
+                                                                                        
+        
+        
+        
+        
+        
+        
+        
+        
+        <version>1.0</version>
+                                                                                    
+      
+      
+      
+      
+      
+      
+      
+      
+      </dependency>
+                                                              
+    
+    
+    
+    
+    
+    
+    
+    
+    </dependencies>
+                                        
+  
+  
+  
+  
+  
+  
+  
+  
+  </dependencyManagement>
+                  
+  
+  
+  
+  
+  
+  
+  
+  
+  <modules>
+                                      
+    
+    
+    
+    
+    
+    
+    
+    
+    <module>Spring-domain</module>
+                                      
+    
+    
+    
+    
+    
+    
+    
+    
+    <module>Spring-commons</module>
+                                  
+    
+    
+    
+    
+    
+    
+    
+    <module>Spring-repo-api</module>
+                              
+    
+    
+    
+    
+    
+    
+    <module>Spring-biz-api</module>
+                          
+    
+    
+    
+    
+    
+    <module>Spring-manager-api</module>
+                      
+    
+    
+    
+    
+    <module>Spring-biz-provider</module>
+                  
+    
+    
+    
+    <module>Spring-repo-provider</module>
+              
+    
+    
+    <module>Spring-manager-provider</module>
+          
+    
+    <module>Spring-ctl</module>
+      
+  </modules>
+                
+
+
+
+
+
+
+
+</project>
